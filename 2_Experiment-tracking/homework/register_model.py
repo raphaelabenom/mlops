@@ -46,6 +46,11 @@ def train_and_log_model(data_path, params):
         test_rmse = mean_squared_error(y_test, rf.predict(X_test), squared=False)
         mlflow.log_metric("test_rmse", test_rmse)
 
+    model_uri = f"runs:/2_Experiment-tracking/homework/mlflow-artifacts/2/"
+    mv = mlflow.register_model(model_uri, "RandomForestRegressionModel")
+    print(f"Name: {mv.name}")
+    print(f"Version: {mv.version}")
+
 
 @click.command()
 @click.option(

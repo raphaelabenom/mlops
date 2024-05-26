@@ -108,7 +108,7 @@ The idea is to just log the information that you need to answer the question bel
 What's the best validation RMSE that you got?
 
 * 4.817
-* 5.335
+-> ANSWER: * 5.335
 * 5.818
 * 6.336
 
